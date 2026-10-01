@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mvas123
+    ports:
+      - "5432:5432"
+
+  web:
+    image: ruby:3.4
+    working_dir: /app
+    volumes:
+      - ./src:/app
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true

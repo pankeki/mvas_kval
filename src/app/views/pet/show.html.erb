@@ -1,0 +1,164 @@
+<% if @pet_id == "1" %>
+  <% pet_name = "Minka" %>
+  <% pet_species = "Kaķis" %>
+  <% pet_breed = "Mājas kaķis" %>
+  <% pet_age = "3 gadi" %>
+  <% pet_gender = "Mātīte" %>
+  <% pet_weight = "4.5 kg" %>
+  <% pet_emoji = "🐱" %>
+<% elsif @pet_id == "2" %>
+  <% pet_name = "Riko" %>
+  <% pet_species = "Suns" %>
+  <% pet_breed = "Labradors" %>
+  <% pet_age = "5 gadi" %>
+  <% pet_gender = "Tēviņš" %>
+  <% pet_weight = "28 kg" %>
+  <% pet_emoji = "🐶" %>
+<% else %>
+  <% pet_name = nil %>
+<% end %>
+
+<% if pet_name.nil? %>
+  <div class="app-layout">
+    <main class="main-content">
+      <h1>Mājdzīvnieks nav atrasts</h1>
+      <%= link_to "Atgriezties", pets_path %>
+    </main>
+  </div>
+<% else %>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">♡</span>
+        <span>PetCare</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <%= link_to root_path, class: "sidebar-link" do %>
+          <span>⌂</span> Sākums
+        <% end %>
+        <%= link_to pets_path, class: "sidebar-link active" do %>
+          <span>♡</span> Mājdzīvnieki
+        <% end %>
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>✚</span> Vakcinācijas
+        <% end %>
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>▣</span> Veterinārārsta apmeklējumi
+        <% end %>
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>♧</span> Medikamenti
+        <% end %>
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>⌁</span> Svara uzskaite
+        <% end %>
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>♧</span> Paziņojumi
+        <% end %>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <%= link_to "#", class: "sidebar-link" do %>
+          <span>⚙</span> Iestatījumi
+        <% end %>
+        <div class="sidebar-profile">
+          <div class="profile-avatar">B</div>
+          <div>
+            <strong>Lietotājs</strong>
+            <small>Mājdzīvnieka īpašnieks</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <%= link_to "← Atpakaļ pie mājdzīvniekiem", pets_path,
+                  class: "back-link" %>
+
+      <header class="pet-profile-header">
+        <div class="pet-profile-avatar"><%= pet_emoji %></div>
+        <div class="pet-profile-info">
+          <p class="eyebrow"><%= pet_species.upcase %></p>
+          <h1><%= pet_name %> <span>♡</span></h1>
+          <p><%= pet_breed %> · <%= pet_age %></p>
+          <span class="pet-status">Vesels</span>
+        </div>
+      </header>
+
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <h2>Pamatinformācija</h2>
+            <p>Informācija par mājdzīvnieku.</p>
+          </div>
+        </div>
+
+        <div class="profile-details-grid">
+          <div class="profile-detail">
+            <span>Vārds</span>
+            <strong><%= pet_name %></strong>
+          </div>
+          <div class="profile-detail">
+            <span>Suga</span>
+            <strong><%= pet_species %></strong>
+          </div>
+          <div class="profile-detail">
+            <span>Šķirne</span>
+            <strong><%= pet_breed %></strong>
+          </div>
+          <div class="profile-detail">
+            <span>Vecums</span>
+            <strong><%= pet_age %></strong>
+          </div>
+          <div class="profile-detail">
+            <span>Dzimums</span>
+            <strong><%= pet_gender %></strong>
+          </div>
+          <div class="profile-detail">
+            <span>Pašreizējais svars</span>
+            <strong><%= pet_weight %></strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <h2>Veselības informācija</h2>
+            <p>Informācija par mājdzīvnieka veselību un aprūpi.</p>
+          </div>
+        </div>
+
+        <div class="profile-modules-grid">
+          <div class="profile-module-card">
+            <div class="stat-icon pink">♡</div>
+            <h3>Vakcinācijas</h3>
+            <p>Vakcināciju vēsture un nākamās vakcinācijas datumi.</p>
+            <span>Vēl nav pievienotu ierakstu</span>
+          </div>
+
+          <div class="profile-module-card">
+            <div class="stat-icon green">✚</div>
+            <h3>Veterinārārsta apmeklējumi</h3>
+            <p>Apmeklējumu vēsture, diagnozes un ārstēšana.</p>
+            <span>Vēl nav pievienotu ierakstu</span>
+          </div>
+
+          <div class="profile-module-card">
+            <div class="stat-icon peach">♧</div>
+            <h3>Medikamenti</h3>
+            <p>Izrakstītie medikamenti un to lietošanas kursi.</p>
+            <span>Vēl nav pievienotu ierakstu</span>
+          </div>
+
+          <div class="profile-module-card">
+            <div class="stat-icon pink">⌁</div>
+            <h3>Svara uzskaite</h3>
+            <p>Mājdzīvnieka svara mērījumi un to izmaiņas.</p>
+            <span>Pašreizējais svars: <%= pet_weight %></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+<% end %>

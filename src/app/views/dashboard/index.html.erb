@@ -1,0 +1,159 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link active" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+      <%= link_to pets_path, class: "sidebar-link" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">TAVA MĀJDZĪVNIEKU APRŪPE</p>
+        <h1>Sveicināti, Barbara! <span>♡</span></h1>
+        <p class="header-description">
+          Šeit vari pārskatīt visu svarīgāko par saviem mīluļiem.
+        </p>
+      </div>
+
+      <button class="notification-button">♧</button>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon pink">♡</div>
+        <div>
+          <p>Mājdzīvnieki</p>
+          <h2>2</h2>
+          <small>Reģistrēti profili</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon peach">✚</div>
+        <div>
+          <p>Vakcinācijas</p>
+          <h2>1</h2>
+          <small>Gaidāmās vakcinācijas</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon lavender">▣</div>
+        <div>
+          <p>Apmeklējumi</p>
+          <h2>3</h2>
+          <small>Reģistrētie apmeklējumi</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">♡</div>
+        <div>
+          <p>Atgādinājumi</p>
+          <h2>2</h2>
+          <small>Aktīvie atgādinājumi</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Mani mājdzīvnieki</h2>
+          <p>Informācija par taviem mīluļiem</p>
+        </div>
+        <%= link_to "+ Pievienot", "#", class: "primary-button" %>
+      </div>
+
+      <div class="pets-grid">
+        <article class="pet-card">
+          <div class="pet-avatar pet-cat">🐱</div>
+          <div class="pet-info">
+            <span class="pet-type">KAĶIS</span>
+            <h3>Minka</h3>
+            <p>3 gadi · Sieviešu</p>
+          </div>
+          <span class="pet-status">Vesels</span>
+        </article>
+
+        <article class="pet-card">
+          <div class="pet-avatar pet-dog">🐶</div>
+          <div class="pet-info">
+            <span class="pet-type">SUNS</span>
+            <h3>Riko</h3>
+            <p>5 gadi · Vīriešu</p>
+          </div>
+          <span class="pet-status">Vesels</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Tuvākie notikumi</h2>
+          <p>Neaizmirsti par svarīgajiem aprūpes uzdevumiem</p>
+        </div>
+        <%= link_to "Skatīt visus", "#", class: "text-link" %>
+      </div>
+
+      <div class="events-card">
+        <div class="event-item">
+          <div class="event-icon">✚</div>
+          <div class="event-details">
+            <strong>Minkas vakcinācija</strong>
+            <small>Plānotā vakcinācija</small>
+          </div>
+          <span class="event-date">25. novembris</span>
+        </div>
+
+        <div class="event-item">
+          <div class="event-icon">▣</div>
+          <div class="event-details">
+            <strong>Riko veterinārārsta apmeklējums</strong>
+            <small>Regulārā veselības pārbaude</small>
+          </div>
+          <span class="event-date">2. decembris</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

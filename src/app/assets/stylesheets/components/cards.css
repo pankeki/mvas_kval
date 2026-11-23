@@ -1,0 +1,133 @@
+.pet-card-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-card-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(48, 43, 45, 0.08);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 26px;
+    color: var(--color-muted);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: var(--color-text);
+}
+
+.pet-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 28px;
+    margin-bottom: 32px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+}
+
+.pet-profile-avatar {
+    width: 112px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--color-background);
+    border-radius: 18px;
+    font-size: 58px;
+}
+
+.pet-profile-info h1 {
+    margin: 6px 0;
+}
+
+.pet-profile-info > p:not(.eyebrow) {
+    color: var(--color-muted);
+    font-size: 14px;
+    margin: 8px 0 12px;
+}
+
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.profile-detail {
+    padding: 18px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.profile-detail span,
+.profile-detail strong {
+    display: block;
+}
+
+.profile-detail span {
+    margin-bottom: 8px;
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+.profile-detail strong {
+    font-size: 15px;
+}
+
+.profile-modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.profile-module-card {
+    padding: 22px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+}
+
+.profile-module-card h3 {
+    margin: 14px 0 8px;
+    font-size: 16px;
+}
+
+.profile-module-card p {
+    min-height: 40px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.profile-module-card > span {
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .profile-details-grid,
+    .profile-modules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pet-profile-header {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .pet-profile-avatar {
+        width: 76px;
+        height: 76px;
+        font-size: 40px;
+    }
+}

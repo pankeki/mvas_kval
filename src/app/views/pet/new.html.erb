@@ -1,0 +1,142 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+
+      <%= link_to pets_path, class: "sidebar-link active" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">MĀJDZĪVNIEKU PĀRVALDĪBA</p>
+        <h1>Pievienot mājdzīvnieku <span>♡</span></h1>
+        <p class="header-description">
+          Pievieno informāciju par savu mīluli.
+        </p>
+      </div>
+    </header>
+
+    <div class="pet-form-container">
+      <div class="form-card">
+        <div class="form-card-heading">
+          <div class="form-heading-icon">♡</div>
+          <div>
+            <h2>Pamatinformācija</h2>
+            <p>Informācija par tavu mājdzīvnieku</p>
+          </div>
+        </div>
+
+        <div class="pet-photo-upload">
+          <div class="photo-placeholder">🐾</div>
+          <div>
+            <strong>Mājdzīvnieka attēls</strong>
+            <p>Izvēlies sava mīluļa fotoattēlu</p>
+            <label class="upload-button">
+              Pievienot attēlu
+              <input type="file" accept="image/*">
+            </label>
+          </div>
+        </div>
+
+        <div class="pet-form-grid">
+          <div class="form-field">
+            <label for="pet_name">Vārds *</label>
+            <input type="text" id="pet_name" placeholder="Piemēram, Minka">
+          </div>
+
+          <div class="form-field">
+            <label for="pet_species">Suga *</label>
+            <select id="pet_species">
+              <option value="">Izvēlies sugu</option>
+              <option>Suns</option>
+              <option>Kaķis</option>
+              <option>Cits</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="pet_breed">Šķirne</label>
+            <input type="text" id="pet_breed" placeholder="Piemēram, Labradors">
+          </div>
+
+          <div class="form-field">
+            <label for="pet_birth_date">Dzimšanas datums</label>
+            <input type="date" id="pet_birth_date">
+          </div>
+
+          <div class="form-field">
+            <label for="pet_gender">Dzimums</label>
+            <select id="pet_gender">
+              <option value="">Izvēlies dzimumu</option>
+              <option>Mātīte</option>
+              <option>Tēviņš</option>
+              <option>Nav zināms</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="pet_weight">Svars (kg)</label>
+            <input type="number" id="pet_weight" min="0" step="0.01" placeholder="Piemēram, 4.5">
+          </div>
+        </div>
+
+        <div class="form-field description-field">
+          <label for="pet_description">Papildu informācija</label>
+          <textarea id="pet_description" rows="4" placeholder="Uzraksti kaut ko par savu mājdzīvnieku..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <%= link_to "Atcelt", pets_path, class: "cancel-button" %>
+          <button type="button" class="primary-button">
+            Saglabāt mājdzīvnieku
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

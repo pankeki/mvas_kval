@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get "pets", to: "pet#index", as: :pets
   get "pets/new", to: "pet#new", as: :new_pet
   get "pets/:id", to: "pet#show", as: :pet
+
+  get "vaccinations", to: "vaccination#index", as: :vaccinations
+  get "vaccinations/new", to: "vaccination#new", as: :new_vaccination
 end

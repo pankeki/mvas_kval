@@ -131,3 +131,72 @@
         font-size: 40px;
     }
 }
+
+
+/* Vaccination list */
+.vaccination-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vaccination-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+}
+
+.vaccination-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--color-background);
+    border-radius: 12px;
+    font-size: 28px;
+}
+
+.vaccination-info {
+    flex: 1;
+}
+
+.vaccination-info h3 {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.vaccination-info p {
+    margin: 5px 0;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.vaccination-status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.vaccination-status.completed {
+    background: #EAF3EC;
+    color: #63866B;
+}
+
+@media (max-width: 700px) {
+    .vaccination-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .vaccination-status {
+        margin-left: 72px;
+    }
+}

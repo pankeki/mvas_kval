@@ -1,0 +1,139 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+
+      <%= link_to pets_path, class: "sidebar-link" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+
+      <%= link_to vaccinations_path, class: "sidebar-link active" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">VESELĪBAS APRŪPE</p>
+        <h1>Vakcinācijas <span>♡</span></h1>
+        <p class="header-description">
+          Šeit vari apskatīt un pārvaldīt savu mājdzīvnieku vakcinācijas.
+        </p>
+      </div>
+
+      <%= link_to "+ Pievienot vakcināciju", new_vaccination_path, class: "primary-button" %>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon pink">✚</div>
+        <div>
+          <p>Kopā vakcinācijas</p>
+          <h2>3</h2>
+          <small>Reģistrētās vakcinācijas</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">♡</div>
+        <div>
+          <p>Veiktas vakcinācijas</p>
+          <h2>2</h2>
+          <small>Jau saņemtās vakcīnas</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon peach">⌁</div>
+        <div>
+          <p>Tuvojas vakcinācija</p>
+          <h2>1</h2>
+          <small>Nākamā plānotā vakcinācija</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Vakcināciju vēsture</h2>
+          <p>Visu mājdzīvnieku reģistrētās vakcinācijas.</p>
+        </div>
+      </div>
+
+      <div class="vaccination-list">
+        <div class="vaccination-card">
+          <div class="vaccination-icon">🐱</div>
+          <div class="vaccination-info">
+            <span class="pet-type">MINKA · KAĶIS</span>
+            <h3>Trakumsērgas vakcīna</h3>
+            <p>Vakcinācijas datums: 2026. gada 10. marts</p>
+            <p>Nākamā vakcinācija: 2027. gada 10. marts</p>
+          </div>
+          <span class="vaccination-status completed">Veikta</span>
+        </div>
+
+        <div class="vaccination-card">
+          <div class="vaccination-icon">🐶</div>
+          <div class="vaccination-info">
+            <span class="pet-type">RIKO · SUNS</span>
+            <h3>Kombinētā vakcīna</h3>
+            <p>Vakcinācijas datums: 2026. gada 15. janvāris</p>
+            <p>Nākamā vakcinācija: 2027. gada 15. janvāris</p>
+          </div>
+          <span class="vaccination-status completed">Veikta</span>
+        </div>
+
+        <div class="vaccination-card">
+          <div class="vaccination-icon">🐱</div>
+          <div class="vaccination-info">
+            <span class="pet-type">MINKA · KAĶIS</span>
+            <h3>Kombinētā vakcīna</h3>
+            <p>Vakcinācijas datums: 2026. gada 20. novembris</p>
+            <p>Nākamā vakcinācija: 2027. gada 20. novembris</p>
+          </div>
+          <span class="vaccination-status completed">Veikta</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

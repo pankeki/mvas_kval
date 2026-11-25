@@ -3,6 +3,7 @@
 @import "sidebar.css";
 @import "dashboard.css";
 @import "medication.css";
+@import "weight_record.css";
 
 /* Reusable components */
 @import "components/buttons.css";

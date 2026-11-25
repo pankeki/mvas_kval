@@ -1,0 +1,227 @@
+.weight-page {
+    max-width: 1500px;
+}
+
+.weight-overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.weight-overview-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 22px;
+}
+
+.weight-overview-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #F7EDEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.weight-overview-card p {
+    color: var(--color-muted);
+    font-size: 13px;
+    margin: 0 0 7px;
+}
+
+.weight-overview-card h2 {
+    font-size: 25px;
+    margin: 0 0 5px;
+}
+
+.weight-overview-card small {
+    font-size: 11px;
+    color: var(--color-muted);
+}
+
+.weight-chart-card,
+.weight-form-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+.weight-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.weight-chart-header h2,
+.weight-form-heading h2 {
+    font-size: 19px;
+    margin: 0 0 7px;
+}
+
+.weight-chart-header p,
+.weight-form-heading p {
+    color: var(--color-muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+.weight-pet-select {
+    min-width: 150px;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    background: white;
+    font: inherit;
+}
+
+.weight-chart {
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.weight-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chart-axis {
+    stroke: #CFC4C7;
+    stroke-width: 1.5;
+}
+
+.chart-grid line {
+    stroke: #F0E7E9;
+    stroke-dasharray: 4 5;
+}
+
+.chart-labels {
+    fill: var(--color-muted);
+    font-size: 12px;
+    text-anchor: end;
+}
+
+.chart-line {
+    fill: none;
+    stroke: #D9BFC5;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart-points circle {
+    fill: #D9BFC5;
+    stroke: white;
+    stroke-width: 3;
+}
+
+.chart-values {
+    fill: var(--color-text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.chart-note {
+    color: var(--color-muted);
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.weight-form-card {
+    max-width: 850px;
+}
+
+.weight-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.weight-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weight-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.weight-form-card .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.weight-form-card input,
+.weight-form-card select,
+.weight-form-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    font: inherit;
+    font-size: 14px;
+    background: white;
+    color: var(--color-text);
+}
+
+.weight-form-card input:focus,
+.weight-form-card select:focus,
+.weight-form-card textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(217, 191, 197, 0.2);
+}
+
+.weight-form-card textarea {
+    resize: vertical;
+}
+
+@media (max-width: 900px) {
+    .weight-overview {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .weight-chart-card,
+    .weight-form-card {
+        padding: 18px;
+    }
+
+    .weight-chart-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .weight-pet-select {
+        width: 100%;
+    }
+}
+
+.weight-form-card {
+    max-width: 650px;
+    width: 100%;
+    margin: 32px auto;
+    background: var(--color-surface);
+    padding: 32px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+}

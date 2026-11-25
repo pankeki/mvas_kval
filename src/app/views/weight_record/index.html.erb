@@ -1,0 +1,197 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+
+      <%= link_to pets_path, class: "sidebar-link" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+
+      <%= link_to vaccinations_path, class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to vet_visits_path, class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to medications_path, class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to weight_records_path, class: "sidebar-link active" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content weight-page">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">VESELĪBAS APRŪPE</p>
+        <h1>Svara uzskaite <span>♡</span></h1>
+        <p class="header-description">
+          Seko līdzi savu mājdzīvnieku svara izmaiņām.
+        </p>
+      </div>
+
+      <%= link_to "+ Pievienot svaru",
+                  new_weight_record_path, class: "primary-button" %>
+    </header>
+
+    <section class="weight-overview">
+      <div class="weight-overview-card">
+        <div class="weight-overview-icon">🐱</div>
+        <div>
+          <p>Minka pašreizējais svars</p>
+          <h2>4.2 kg</h2>
+          <small>+0.2 kg kopš iepriekšējā mērījuma</small>
+        </div>
+      </div>
+
+      <div class="weight-overview-card">
+        <div class="weight-overview-icon">🐶</div>
+        <div>
+          <p>Riko pašreizējais svars</p>
+          <h2>12.5 kg</h2>
+          <small>+0.2 kg kopš iepriekšējā mērījuma</small>
+        </div>
+      </div>
+
+      <div class="weight-overview-card">
+        <div class="weight-overview-icon">⌁</div>
+        <div>
+          <p>Kopā mērījumi</p>
+          <h2>5</h2>
+          <small>Reģistrētie svara ieraksti</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="weight-chart-card">
+      <div class="weight-chart-header">
+        <div>
+          <h2>Svara izmaiņas</h2>
+          <p>Apskati mājdzīvnieka svara vēsturi grafikā.</p>
+        </div>
+
+        <select class="weight-pet-select" aria-label="Izvēlēties mājdzīvnieku">
+          <option value="minka">Minka</option>
+          <option value="riko">Riko</option>
+        </select>
+      </div>
+
+      <div class="weight-chart">
+        <svg viewBox="0 0 700 280" role="img"
+             aria-label="Minkas svara izmaiņu grafiks">
+
+          <line x1="65" y1="30" x2="65" y2="225" class="chart-axis"/>
+          <line x1="65" y1="225" x2="665" y2="225" class="chart-axis"/>
+
+          <g class="chart-grid">
+            <line x1="65" y1="45" x2="665" y2="45"/>
+            <line x1="65" y1="90" x2="665" y2="90"/>
+            <line x1="65" y1="135" x2="665" y2="135"/>
+            <line x1="65" y1="180" x2="665" y2="180"/>
+          </g>
+
+          <g class="chart-labels">
+            <text x="48" y="49">4.4</text>
+            <text x="48" y="94">4.2</text>
+            <text x="48" y="139">4.0</text>
+            <text x="48" y="184">3.8</text>
+            <text x="48" y="229">3.6</text>
+
+            <text x="65" y="250">20.08.</text>
+            <text x="215" y="250">20.09.</text>
+            <text x="365" y="250">20.10.</text>
+            <text x="515" y="250">20.11.</text>
+          </g>
+
+          <path d="M65 180 L215 157 L365 135 L515 90"
+                class="chart-line"/>
+
+          <g class="chart-points">
+            <circle cx="65" cy="180" r="5"/>
+            <circle cx="215" cy="157" r="5"/>
+            <circle cx="365" cy="135" r="5"/>
+            <circle cx="515" cy="90" r="5"/>
+          </g>
+
+          <g class="chart-values">
+            <text x="65" y="165">3.8 kg</text>
+            <text x="215" y="142">3.9 kg</text>
+            <text x="365" y="120">4.0 kg</text>
+            <text x="515" y="75">4.2 kg</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="chart-note">
+        Grafikā attēloti demonstrācijas dati. Reālie mērījumi tiks
+        parādīti pēc datubāzes pieslēgšanas.
+      </p>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Pēdējie svara mērījumi</h2>
+          <p>Jaunākie reģistrētie svara ieraksti.</p>
+        </div>
+
+        <%= link_to "Pievienot jaunu +",
+                    new_weight_record_path, class: "text-link" %>
+      </div>
+
+      <div class="vet-visit-list">
+        <div class="vet-visit-card">
+          <div class="vet-visit-icon">🐱</div>
+          <div class="vet-visit-info">
+            <span class="pet-type">MINKA · KAĶIS</span>
+            <h3>4.2 kg</h3>
+            <p>Mērījuma datums: 2026. gada 20. novembris</p>
+            <p>Piezīmes: Svars normas robežās.</p>
+          </div>
+          <span class="vet-visit-status completed">Reģistrēts</span>
+        </div>
+
+        <div class="vet-visit-card">
+          <div class="vet-visit-icon">🐶</div>
+          <div class="vet-visit-info">
+            <span class="pet-type">RIKO · SUNS</span>
+            <h3>12.5 kg</h3>
+            <p>Mērījuma datums: 2026. gada 18. novembris</p>
+            <p>Piezīmes: Svara izmaiņas nav novērotas.</p>
+          </div>
+          <span class="vet-visit-status completed">Reģistrēts</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

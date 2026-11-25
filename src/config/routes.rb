@@ -28,4 +28,7 @@ Rails.application.routes.draw do
 
   get "medications", to: "medication#index", as: :medications
   get "medications/new", to: "medication#new", as: :new_medication
+
+  get "weight_records", to: "weight_record#index", as: :weight_records
+  get "weight_records/new", to: "weight_record#new", as: :new_weight_record
 end

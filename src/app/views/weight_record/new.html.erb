@@ -1,0 +1,109 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+      <%= link_to pets_path, class: "sidebar-link" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+      <%= link_to vaccinations_path, class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+      <%= link_to vet_visits_path, class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+      <%= link_to medications_path, class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+      <%= link_to weight_records_path, class: "sidebar-link active" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content weight-page">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">VESELĪBAS APRŪPE</p>
+        <h1>Pievienot svara ierakstu <span>♡</span></h1>
+        <p class="header-description">
+          Reģistrē jaunu mājdzīvnieka svara mērījumu.
+        </p>
+      </div>
+
+      <%= link_to "← Atpakaļ", weight_records_path,
+                  class: "cancel-button" %>
+    </header>
+
+    <section class="weight-form-card">
+      <div class="weight-form-heading">
+        <div class="weight-overview-icon">⌁</div>
+        <div>
+          <h2>Svara informācija</h2>
+          <p>Aizpildi informāciju par veikto mērījumu.</p>
+        </div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="pet">Mājdzīvnieks</label>
+          <select id="pet" name="pet" required>
+            <option value="">Izvēlies mājdzīvnieku</option>
+            <option value="minka">Minka</option>
+            <option value="riko">Riko</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="weight">Svars (kg)</label>
+          <input type="number" id="weight" name="weight"
+                 min="0.01" step="0.01" placeholder="Piemēram, 4.5"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="measurement_date">Mērījuma datums</label>
+          <input type="date" id="measurement_date"
+                 name="measurement_date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Piezīmes</label>
+          <textarea id="notes" name="notes" rows="4"
+                    placeholder="Papildu informācija par svara izmaiņām..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <%= link_to "Atcelt", weight_records_path,
+                      class: "cancel-button" %>
+          <button type="button" class="cancel-button">
+            Saglabāt ierakstu
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+</div>

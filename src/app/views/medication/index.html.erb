@@ -1,22 +1,74 @@
-<div class="medication-page">
-  <div class="page-header">
-    <div>
-      <h1>Medikamenti</h1>
-      <p class="page-subtitle">Pārvaldi savu mājdzīvnieku medikamentus un lietošanas kursus.</p>
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
     </div>
 
-    <%= link_to "+ Pievienot medikamentu", new_medication_path, class: "primary-button" %>
-  </div>
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
 
-  <div class="content-card">
-    <div class="section-header">
-      <h2>Medikamentu saraksts</h2>
+      <%= link_to pets_path, class: "sidebar-link active" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+
+      <%= link_to vaccinations_path, class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to vet_visits_path, class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to medications_path, class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="medication-page">
+    <div class="page-header">
+      <div>
+        <h1>Medikamenti</h1>
+        <p class="page-subtitle">Pārvaldi savu mājdzīvnieku medikamentus un lietošanas kursus.</p>
+      </div>
+
+      <%= link_to "+ Pievienot medikamentu", new_medication_path, class: "primary-button" %>
     </div>
 
-    <div class="empty-state">
-      <div class="empty-state-icon">♡</div>
-      <h3>Vēl nav pievienotu medikamentu</h3>
-      <p>Pievieno pirmo medikamentu, lai sāktu uzskaitīt sava mājdzīvnieka ārstēšanu.</p>
+    <div class="content-card">
+      <div class="section-header">
+        <h2>Medikamentu saraksts</h2>
+      </div>
+
+      <div class="empty-state">
+        <div class="empty-state-icon">♡</div>
+        <h3>Vēl nav pievienotu medikamentu</h3>
+        <p>Pievieno pirmo medikamentu, lai sāktu uzskaitīt sava mājdzīvnieka ārstēšanu.</p>
+      </div>
     </div>
   </div>
 </div>

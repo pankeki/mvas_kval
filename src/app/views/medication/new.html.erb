@@ -1,62 +1,114 @@
-<div class="medication-page">
-  <div class="page-header">
-    <div>
-      <h1>Pievienot medikamentu</h1>
-      <p class="page-subtitle">Pievieno informāciju par medikamentu un tā lietošanas kursu.</p>
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
     </div>
 
-    <%= link_to "← Atpakaļ", medications_path, class: "back-link" %>
-  </div>
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
 
-  <div class="content-card">
-    <h2>Medikamenta informācija</h2>
+      <%= link_to pets_path, class: "sidebar-link active" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
 
-    <form>
-      <div class="form-group">
-        <label>Mājdzīvnieks</label>
-        <select>
-          <option>Izvēlies mājdzīvnieku</option>
-          <option>Minka</option>
-          <option>Riko</option>
-        </select>
+      <%= link_to vaccination_path, class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to vet_visits_path, class: "sidebar-link" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to medications_path, class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="medication-page">
+    <div class="page-header">
+      <div>
+        <h1>Pievienot medikamentu</h1>
+        <p class="page-subtitle">Pievieno informāciju par medikamentu un tā lietošanas kursu.</p>
       </div>
 
-      <div class="form-group">
-        <label>Medikamenta nosaukums</label>
-        <input type="text" placeholder="Piemēram, Antibiotikas">
-      </div>
+      <%= link_to "← Atpakaļ", medications_path, class: "back-link" %>
+    </div>
 
-      <div class="form-group">
-        <label>Deva</label>
-        <input type="text" placeholder="Piemēram, 1 tablete">
-      </div>
+    <div class="content-card">
+      <h2>Medikamenta informācija</h2>
 
-      <div class="form-group">
-        <label>Lietošanas biežums</label>
-        <input type="text" placeholder="Piemēram, 2 reizes dienā">
-      </div>
-
-      <div class="form-row">
+      <form>
         <div class="form-group">
-          <label>Sākuma datums</label>
-          <input type="date">
+          <label>Mājdzīvnieks</label>
+          <select>
+            <option>Izvēlies mājdzīvnieku</option>
+            <option>Minka</option>
+            <option>Riko</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label>Beigu datums</label>
-          <input type="date">
+          <label>Medikamenta nosaukums</label>
+          <input type="text" placeholder="Piemēram, Antibiotikas">
         </div>
-      </div>
 
-      <div class="form-group">
-        <label>Piezīmes</label>
-        <textarea rows="4" placeholder="Papildu informācija..."></textarea>
-      </div>
+        <div class="form-group">
+          <label>Deva</label>
+          <input type="text" placeholder="Piemēram, 1 tablete">
+        </div>
 
-      <div class="form-actions">
-        <%= link_to "Atcelt", medications_path, class: "cancel-button" %>
-        <button type="button" class="primary-button">Saglabāt medikamentu</button>
-      </div>
-    </form>
+        <div class="form-group">
+          <label>Lietošanas biežums</label>
+          <input type="text" placeholder="Piemēram, 2 reizes dienā">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Sākuma datums</label>
+            <input type="date">
+          </div>
+
+          <div class="form-group">
+            <label>Beigu datums</label>
+            <input type="date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Piezīmes</label>
+          <textarea rows="4" placeholder="Papildu informācija..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <%= link_to "Atcelt", medications_path, class: "cancel-button" %>
+          <button type="button" class="primary-button">Saglabāt medikamentu</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

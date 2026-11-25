@@ -1,0 +1,22 @@
+<div class="medication-page">
+  <div class="page-header">
+    <div>
+      <h1>Medikamenti</h1>
+      <p class="page-subtitle">Pārvaldi savu mājdzīvnieku medikamentus un lietošanas kursus.</p>
+    </div>
+
+    <%= link_to "+ Pievienot medikamentu", new_medication_path, class: "primary-button" %>
+  </div>
+
+  <div class="content-card">
+    <div class="section-header">
+      <h2>Medikamentu saraksts</h2>
+    </div>
+
+    <div class="empty-state">
+      <div class="empty-state-icon">♡</div>
+      <h3>Vēl nav pievienotu medikamentu</h3>
+      <p>Pievieno pirmo medikamentu, lai sāktu uzskaitīt sava mājdzīvnieka ārstēšanu.</p>
+    </div>
+  </div>
+</div>

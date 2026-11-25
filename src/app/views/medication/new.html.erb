@@ -1,0 +1,62 @@
+<div class="medication-page">
+  <div class="page-header">
+    <div>
+      <h1>Pievienot medikamentu</h1>
+      <p class="page-subtitle">Pievieno informāciju par medikamentu un tā lietošanas kursu.</p>
+    </div>
+
+    <%= link_to "← Atpakaļ", medications_path, class: "back-link" %>
+  </div>
+
+  <div class="content-card">
+    <h2>Medikamenta informācija</h2>
+
+    <form>
+      <div class="form-group">
+        <label>Mājdzīvnieks</label>
+        <select>
+          <option>Izvēlies mājdzīvnieku</option>
+          <option>Minka</option>
+          <option>Riko</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Medikamenta nosaukums</label>
+        <input type="text" placeholder="Piemēram, Antibiotikas">
+      </div>
+
+      <div class="form-group">
+        <label>Deva</label>
+        <input type="text" placeholder="Piemēram, 1 tablete">
+      </div>
+
+      <div class="form-group">
+        <label>Lietošanas biežums</label>
+        <input type="text" placeholder="Piemēram, 2 reizes dienā">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Sākuma datums</label>
+          <input type="date">
+        </div>
+
+        <div class="form-group">
+          <label>Beigu datums</label>
+          <input type="date">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Piezīmes</label>
+        <textarea rows="4" placeholder="Papildu informācija..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <%= link_to "Atcelt", medications_path, class: "cancel-button" %>
+        <button type="button" class="primary-button">Saglabāt medikamentu</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -25,4 +25,7 @@ Rails.application.routes.draw do
 
   get "vet_visits", to: "vet_visit#index", as: :vet_visits
   get "vet_visits/new", to: "vet_visit#new", as: :new_vet_visit
+
+  get "medications", to: "medication#index", as: :medications
+  get "medications/new", to: "medication#new", as: :new_medication
 end

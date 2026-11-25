@@ -1,0 +1,155 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">♡</span>
+      <span>PetCare</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <%= link_to root_path, class: "sidebar-link" do %>
+        <span>⌂</span> Sākums
+      <% end %>
+
+      <%= link_to pets_path, class: "sidebar-link" do %>
+        <span>♡</span> Mājdzīvnieki
+      <% end %>
+
+      <%= link_to vaccinations_path, class: "sidebar-link" do %>
+        <span>✚</span> Vakcinācijas
+      <% end %>
+
+      <%= link_to vet_visits_path, class: "sidebar-link active" do %>
+        <span>▣</span> Veterinārārsta apmeklējumi
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Medikamenti
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⌁</span> Svara uzskaite
+      <% end %>
+
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>♧</span> Paziņojumi
+      <% end %>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <%= link_to "#", class: "sidebar-link" do %>
+        <span>⚙</span> Iestatījumi
+      <% end %>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar">B</div>
+        <div>
+          <strong>Lietotājs</strong>
+          <small>Mājdzīvnieka īpašnieks</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">VESELĪBAS APRŪPE</p>
+        <h1>Veterinārārsta apmeklējumi <span>♡</span></h1>
+        <p class="header-description">
+          Šeit vari apskatīt un pārvaldīt savu mājdzīvnieku veterinārārsta apmeklējumus.
+        </p>
+      </div>
+
+      <%= link_to "+ Pievienot apmeklējumu", new_vet_visit_path, class: "primary-button" %>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon pink">▣</div>
+        <div>
+          <p>Kopā apmeklējumi</p>
+          <h2>3</h2>
+          <small>Reģistrētie apmeklējumi</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">♡</div>
+        <div>
+          <p>Pēdējais apmeklējums</p>
+          <h2>12.10.</h2>
+          <small>2026. gada 12. oktobris</small>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon peach">⌁</div>
+        <div>
+          <p>Tuvākais apmeklējums</p>
+          <h2>05.12.</h2>
+          <small>2026. gada 5. decembris</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Apmeklējumu vēsture</h2>
+          <p>Visi reģistrētie veterinārārsta apmeklējumi.</p>
+        </div>
+      </div>
+
+      <div class="vet-visit-list">
+
+        <div class="vet-visit-card">
+          <div class="vet-visit-icon">🐱</div>
+
+          <div class="vet-visit-info">
+            <span class="pet-type">MINKA · KAĶIS</span>
+            <h3>Profilaktiskā pārbaude</h3>
+            <p>Datums: 2026. gada 12. oktobris</p>
+            <p>Veterinārārsts: Dr. Kalniņa</p>
+            <p>Klīnika: Dzīvnieku veselības centrs</p>
+            <p>Diagnoze: Veselības stāvoklis normāls</p>
+            <p>Ārstēšana: Nav nepieciešama</p>
+          </div>
+
+          <span class="vet-visit-status completed">Apmeklēts</span>
+        </div>
+
+        <div class="vet-visit-card">
+          <div class="vet-visit-icon">🐶</div>
+
+          <div class="vet-visit-info">
+            <span class="pet-type">RIKO · SUNS</span>
+            <h3>Veterinārā pārbaude</h3>
+            <p>Datums: 2026. gada 4. septembris</p>
+            <p>Veterinārārsts: Dr. Bērziņš</p>
+            <p>Klīnika: PetCity veterinārā klīnika</p>
+            <p>Diagnoze: Neliels ādas kairinājums</p>
+            <p>Ārstēšana: Ieteikta ādas kopšana</p>
+          </div>
+
+          <span class="vet-visit-status completed">Apmeklēts</span>
+        </div>
+
+        <div class="vet-visit-card">
+          <div class="vet-visit-icon">🐱</div>
+
+          <div class="vet-visit-info">
+            <span class="pet-type">MINKA · KAĶIS</span>
+            <h3>Regulārā veselības pārbaude</h3>
+            <p>Datums: 2026. gada 5. decembris</p>
+            <p>Klīnika: Dzīvnieku veselības centrs</p>
+            <p>Diagnoze: Vēl nav noteikta</p>
+            <p>Ārstēšana: Vēl nav noteikta</p>
+          </div>
+
+          <span class="vet-visit-status planned">Plānots</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>

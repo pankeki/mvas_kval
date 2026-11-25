@@ -200,3 +200,77 @@
         margin-left: 72px;
     }
 }
+
+/* Veterinary visit list */
+.vet-visit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vet-visit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+}
+
+.vet-visit-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--color-background);
+    border-radius: 12px;
+    font-size: 28px;
+}
+
+.vet-visit-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vet-visit-info h3 {
+    margin: 7px 0 12px;
+    font-size: 16px;
+}
+
+.vet-visit-info p {
+    margin: 6px 0;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.vet-visit-status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.vet-visit-status.completed {
+    background: #EAF3EC;
+    color: #63866B;
+}
+
+.vet-visit-status.planned {
+    background: #F9F0E5;
+    color: #A77B43;
+}
+
+@media (max-width: 700px) {
+    .vet-visit-card {
+        flex-wrap: wrap;
+    }
+
+    .vet-visit-status {
+        margin-left: 72px;
+    }
+}

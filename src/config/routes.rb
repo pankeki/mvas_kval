@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "vet_visit/index"
+  get "vet_visit/new"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -20,4 +22,7 @@ Rails.application.routes.draw do
 
   get "vaccinations", to: "vaccination#index", as: :vaccinations
   get "vaccinations/new", to: "vaccination#new", as: :new_vaccination
+
+  get "vet_visits", to: "vet_visit#index", as: :vet_visits
+  get "vet_visits/new", to: "vet_visit#new", as: :new_vet_visit
 end
